@@ -1,0 +1,27 @@
+/*    */ package cn.soa.entity;
+/*    */ 
+/*    */ 
+/*    */ public class RoleAuthority
+/*    */ {
+/*    */   private String autid;
+/*    */   private String type;
+/*    */   private String name;
+/*    */   private String note;
+/*    */   private String resourceName;
+/*    */   private String url;
+/*    */   private String describe;
+/*    */   private String modId;
+/*    */   private String parentId;
+/*    */   
+/*    */   public RoleAuthority(String autid, String type, String name, String note, String resourceName, String url, String describe, String modId, String parentId)
+/*    */   {
+/* 18 */     this.autid = autid;this.type = type;this.name = name;this.note = note;this.resourceName = resourceName;this.url = url;this.describe = describe;this.modId = modId;this.parentId = parentId; }
+/*    */   public RoleAuthority() {}
+/* 20 */   public String getAutid() { return this.autid; } public String getType() { return this.type; } public String getName() { return this.name; } public String getNote() { return this.note; } public String getResourceName() { return this.resourceName; } public String getUrl() { return this.url; } public String getDescribe() { return this.describe; } public String getModId() { return this.modId; } public String getParentId() { return this.parentId; } public RoleAuthority setAutid(String autid) { this.autid = autid;return this; } public RoleAuthority setType(String type) { this.type = type;return this; } public RoleAuthority setName(String name) { this.name = name;return this; } public RoleAuthority setNote(String note) { this.note = note;return this; } public RoleAuthority setResourceName(String resourceName) { this.resourceName = resourceName;return this; } public RoleAuthority setUrl(String url) { this.url = url;return this; } public RoleAuthority setDescribe(String describe) { this.describe = describe;return this; } public RoleAuthority setModId(String modId) { this.modId = modId;return this; } public RoleAuthority setParentId(String parentId) { this.parentId = parentId;return this; } public boolean equals(Object o) { if (o == this) return true; if (!(o instanceof RoleAuthority)) return false; RoleAuthority other = (RoleAuthority)o; if (!other.canEqual(this)) return false; Object this$autid = getAutid();Object other$autid = other.getAutid(); if (this$autid == null ? other$autid != null : !this$autid.equals(other$autid)) return false; Object this$type = getType();Object other$type = other.getType(); if (this$type == null ? other$type != null : !this$type.equals(other$type)) return false; Object this$name = getName();Object other$name = other.getName(); if (this$name == null ? other$name != null : !this$name.equals(other$name)) return false; Object this$note = getNote();Object other$note = other.getNote(); if (this$note == null ? other$note != null : !this$note.equals(other$note)) return false; Object this$resourceName = getResourceName();Object other$resourceName = other.getResourceName(); if (this$resourceName == null ? other$resourceName != null : !this$resourceName.equals(other$resourceName)) return false; Object this$url = getUrl();Object other$url = other.getUrl(); if (this$url == null ? other$url != null : !this$url.equals(other$url)) return false; Object this$describe = getDescribe();Object other$describe = other.getDescribe(); if (this$describe == null ? other$describe != null : !this$describe.equals(other$describe)) return false; Object this$modId = getModId();Object other$modId = other.getModId(); if (this$modId == null ? other$modId != null : !this$modId.equals(other$modId)) return false; Object this$parentId = getParentId();Object other$parentId = other.getParentId();return this$parentId == null ? other$parentId == null : this$parentId.equals(other$parentId); } protected boolean canEqual(Object other) { return other instanceof RoleAuthority; } public int hashCode() { int PRIME = 59;int result = 1;Object $autid = getAutid();result = result * 59 + ($autid == null ? 43 : $autid.hashCode());Object $type = getType();result = result * 59 + ($type == null ? 43 : $type.hashCode());Object $name = getName();result = result * 59 + ($name == null ? 43 : $name.hashCode());Object $note = getNote();result = result * 59 + ($note == null ? 43 : $note.hashCode());Object $resourceName = getResourceName();result = result * 59 + ($resourceName == null ? 43 : $resourceName.hashCode());Object $url = getUrl();result = result * 59 + ($url == null ? 43 : $url.hashCode());Object $describe = getDescribe();result = result * 59 + ($describe == null ? 43 : $describe.hashCode());Object $modId = getModId();result = result * 59 + ($modId == null ? 43 : $modId.hashCode());Object $parentId = getParentId();result = result * 59 + ($parentId == null ? 43 : $parentId.hashCode());return result; } public String toString() { return "RoleAuthority(autid=" + getAutid() + ", type=" + getType() + ", name=" + getName() + ", note=" + getNote() + ", resourceName=" + getResourceName() + ", url=" + getUrl() + ", describe=" + getDescribe() + ", modId=" + getModId() + ", parentId=" + getParentId() + ")"; }
+/*    */ }
+
+
+/* Location:              D:\项目管理\酒店管理\酒店管理\WEB-INF\classes\!\cn\soa\entity\RoleAuthority.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       0.7.1
+ */
