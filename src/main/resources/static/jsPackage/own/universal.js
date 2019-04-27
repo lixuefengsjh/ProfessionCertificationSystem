@@ -330,7 +330,6 @@ function gAjax( url, data, succFuncName ){
 	 		if( jsonData ){
 	 			var data = jsonData.data;
 	 			if( jsonData.state == 0 && data ){
-	 				layer.msg( jsonData.message, {icon:1} );
 	 				succFuncName(data);
 	 			}else{
 	 				layer.msg( jsonData.message, {icon:2} );
@@ -630,7 +629,6 @@ function gAjaxByJson( url, data, succFuncName ){
 	 		if( jsonData ){
 	 			var data = jsonData.data;
 	 			if( jsonData.state == 0 && data ){
-	 				layer.msg( jsonData.message, {icon:1} );
 	 				eval( succFuncName + "(data)" );
 	 			}else{
 	 				layer.msg( jsonData.message, {icon:2} );

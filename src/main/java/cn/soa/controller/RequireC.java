@@ -36,13 +36,14 @@ public class RequireC{
 			@RequestParam Map<String,String> require ){
 		logger.debug( require.toString() );
 		String sql = "insert into student_graduation_req "
-				+ " (reid,number,expectscore,describle) "
+				+ " (reid,number,expectscore,describle,rname) "
 				+ " values  "
-				+ " (" + UUID.randomUUID().toString() 
-				+ "," + require.get("number")  
-				+ "," + require.get("expectscore")  
-				+ "," + require.get("describle")  
-				+")";
+				+ " ('" + UUID.randomUUID().toString() 
+				+ "','" + require.get("number")  
+				+ "','" + require.get("expectscore")  
+				+ "','" + require.get("describle")  
+				+ "','" + require.get("rname")  
+				+"')";
 		try {
 			jt.execute(sql);
 			return new ResultJson<String>( 0, "插入数据成功", "1" );
@@ -68,32 +69,38 @@ public class RequireC{
 				+ "  where reid='" + id.trim() + "'";
 		try {
 			jt.execute(sql);
-			return new ResultJson<Integer>( 0, "插入数据成功", 1 );
+			return new ResultJson<Integer>( 0, "删除数据成功", 1 );
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;
 		}	
 	}
 	
-	@PutMapping()
+	@PutMapping("")
 	public ResultJson<Integer> updateRequireC(
 			@RequestParam Map<String,String> require 	){
+		logger.debug( "修改");
+		logger.debug( require.toString());
+		logger.debug( require.get("REID"));
 		String sql = "delete from student_graduation_req "
-				+ "  where reid='" + require.get("reid").trim() + "'";
+				+ "  where reid='" + require.get("REID").trim() + "'";
 		try {
 			jt.execute(sql);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return null;
 		}	
-		String sql1 = "insert into student_graduation_req "
-				+ " (reid,number,expectscore,describle) "
+		String sql1  = "insert into student_graduation_req "
+				+ " (REID,NUMBER,EXPECTSCORE,DESCRIBLE,PARENTID,RNAME,REMARK1,REMARK2) "
 				+ " values  "
-				+ " (" + UUID.randomUUID().toString() 
-				+ "," + require.get("number")  
-				+ "," + require.get("expectscore")  
-				+ "," + require.get("describle")  
-				+")";
+				+ " ('" + UUID.randomUUID().toString() 
+				+ "','" + require.get("NUMBER")  
+				+ "','" + require.get("EXPECTSCORE")  
+				+ "','" + require.get("DESCRIBLE")  
+				+ "','" + require.get("PARENTID")  
+				+ "','" + require.get("RNAME")  
+				+ "','" + require.get("REMARK1")  
+				+ "','" + require.get("REMARK2")  
+				+"')";
 		try {
 			jt.execute(sql1);
 			return new ResultJson<Integer>( 0, "修改数据成功", 1 );
