@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<title>指标管理</title>
+  	<meta name="renderer" content="webkit">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  	<link rel="stylesheet" href="../jsPackage/layui-v2.4.5/css/layui.css"  media="all"> 	
+  	<script src="../jsPackage/jquery-3.3.1/jquery-3.3.1.min.js" type="text/javascript"></script>	
+	<script src="../jsPackage/layui-v2.4.5/layui.all.js" type="text/javascript"></script>   	
+  	<script src="../js/micro_userManager.js" type="text/javascript"></script>  	
+  	<script src="../jsPackage/own/universal.js" type="text/javascript"></script>
+</head>
+<body >
+	<div class="loadContent">
+		<div style="padding-left:15px">
+		<!-- 指标管理 -->
+		<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+	  		<legend>指标管理</legend>
+		</fieldset>
+		
+		<!-- 操作按钮  -->
+		<div class=" layui-inline layui-btn-group demoTable">	
+			<button class="layui-btn" id="add">新增</button>
+		</div>
+		
+		<!-- 数据表格展示区 -->
+	    <div id="tableDiv">
+	       <table class="layui-hide" id="table" lay-filter="table"></table>
+	    </div>
+	    
+	    <!-- 指标新增区域 -->
+	    <div id="addArea" style="display:none">
+		<form class="layui-form"  action="" >
+			<div class="layui-form-item">
+			    <label class="layui-form-label">毕业要求：</label>
+			    <div class="layui-input-block">
+			    	<select name="parentid"  lay-filter="parentid">
+			        	<option value="1">要求1：具有人文社会科学素养、社会责任感和工程职业道德</option>
+			        	<option value="2">要求2：具有从事工程工作所需的相关数学、自然科学以及经济和管理知识</option>
+			        	<option value="3">要求3：掌握工程基础知识和本专业的基本理论知识，具有系统的工程时间学习经历，了解本专业的前沿发展现状和趋势</option>
+			        	<option value="4">要求4：具备设计和实施工程实验的能力，并能够对实验结果进行分析</option>
+			        	<option value="5">要求5：掌握基本的创新方法，具有追求创新的态度和意识，具有综合运用理论和技术手段设计系统和过程的能力，设计过程中能够综合考虑经济、环境、法律、安全、健康、伦理等制约因素</option>
+			        	<option value="6">要求6：掌握文献检索、资料查询及运用现代信息技术获取相关信息的基本方法</option>
+			        	<option value="7">要求7：了解与本专业相关的职业和行业的生产、设计、研究与开发、环境保护和可持续发展等方面的方针、政策和法律法规，能正确认识工程对于客观世界和社会的影响</option>
+			        	<option value="8">要求8：具有一定的组织管理能力、表达能力和人际交往能力以及在团队中发挥作用的能力</option>
+			        	<option value="9">要求9：对终身学习有正确的认识，具有不断学习和适应发展的能力</option>
+			        	<option value="10">要求10：具有国际视野和跨文化的交流、竞争与合作能力</option>
+			      	</select>
+			    </div>
+			</div>
+  			<div class="layui-form-item">
+		    	<label class="layui-form-label">指标编号：</label>
+		    	<div class="layui-input-block">
+		      		<input type="text" name="number" id="number" autocomplete="off" 
+		      			placeholder="" class="layui-input" style="width:60%;display:inline-block">
+		    	</div>
+		  	</div>		
+		  	<div class="layui-form-item">
+		    	<label class="layui-form-label">指标分数：</label>
+		    	<div class="layui-input-block">
+		      		<input type="text" name="expectscore" id="expectscore" autocomplete="off" 
+		      			placeholder="请输入姓名" class="layui-input"  style="width:60%;display:inline-block">
+		    	</div>
+		  	</div>		
+		  	<div class="layui-form-item">
+		    	<label class="layui-form-label">指标描述：</label>
+		    	<div class="layui-input-block">
+		      		<input type="text" name="describle" id="describle" autocomplete="off" 
+		      			placeholder="" class="layui-input"  style="width:60%;display:inline-block">
+		    	</div>	
+		    </div>		  		
+		</form>
+		</div>
+		<!-- js css-->
+		<script type="text/html" id="barDemo">
+  		  	<a class="layui-btn layui-btn-xs" lay-event="save">保存</a>
+  			<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+		</script>
+	  	<script src="../js/requireManager.js" type="text/javascript"></script>
+	  	<script src="../jsPackage/jquery-3.3.1/jquery.validate.js" type="text/javascript"></script>
+	  	</div>
+  	</div>
+</body>
+</html>
